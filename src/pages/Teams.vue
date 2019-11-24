@@ -1,6 +1,6 @@
 <template lang="pug">
   q-page(padding)
-    h4.q-ma-xs.q-mb-lg Active Teams
+    h4.q-ma-xs.q-mb-lg.text-accent Active Teams
     .row.justify-center.q-gutter-md
       q-card(v-for="(team,index) of teams" style="max-width:350px;" :key="index").q-pa-md
         .row

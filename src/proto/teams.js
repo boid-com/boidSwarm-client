@@ -4,6 +4,7 @@ module.exports = [
     score:"2000",
     img:"https://vignette.wikia.nocookie.net/mua/images/f/f3/MUA3_Hulk.png/revision/latest?cb=20190622010859",
     research:"Weather Prediction",
+    icon:"/statics/weather_pediction.svg",
     progress:35,
     members:[
         {
@@ -38,6 +39,7 @@ module.exports = [
     img:"https://wallpaperaccess.com/full/19921.jpg",
     research: "Dark Matter Search",
     progress:56,
+    icon:"statics/dark-matter-search.svg",
     members:[
         {
             "name": "Abdullah Hadley",
@@ -71,6 +73,7 @@ module.exports = [
     img:"https://s3-media0.fl.yelpcdn.com/bphoto/-ZWblR2E8hfHWGcm7nKdwg/ls.jpg",
     research: "Antibiotic Analytics",
     progress:26,
+    icon:"/statics/antibiotic-analytics.svg",
     members:[
         {
             "name": "Abdullah Hadley",
@@ -104,6 +107,7 @@ module.exports = [
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRFDBASTLV_Lx2PiRZiVEuQ0xGwcCrZAyOBaqePnZyp2E0Lakt&s",
     research:"Mapping Cancer Markers",
     progress:65,
+    icon:"/statics/cancer-mapping.svg",
     members:[
         {
             "name": "Miyah Myles",

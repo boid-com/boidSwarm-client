@@ -1,6 +1,6 @@
 <template lang="pug">
   q-page(padding)
-    h4.q-ma-xs.q-mb-lg Profile
+    h4.q-ma-xs.q-mb-lg.text-accent Profile
     div(v-if="!thisUser")
       .row.justify-center
         div You need to login first...
@@ -21,11 +21,15 @@
         q-card.q-pa-md
           h5.q-ma-xs Contributions
           .row(style="max-width:300px;")
-            div.full-width(v-for="({research},index) of teamList" :key="index").bg-grey-2.q-ma-sm.q-pa-md.text-grey-9
-              h6.q-ma-sm {{research}}
-              .q-ma-sm
-                div Total Work Units: #[strong.text-body1 {{rand(1,3400)}}]
-                div Score: #[strong.text-body1 {{rand(1,34000)}}]
+            div.full-width(v-for="({research,icon},index) of teamList" :key="index").bg-grey-2.q-ma-sm.q-pa-md.text-grey-9
+              .row.items-center
+                .col-auto
+                  img(:src="icon" style="width:70px;").q-pa-sm
+                .col
+                  h6.q-ma-sm {{research}}
+                  .q-ma-sm
+                    div Total Work Units: #[strong.text-body1 {{rand(1,3400)}}]
+                    div Score: #[strong.text-body1 {{rand(1,34000)}}]
         q-card.q-pa-md
           h5.q-ma-xs NFT Medals Earned
           .row(style="max-width:300px;")
