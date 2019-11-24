@@ -9,7 +9,7 @@
             template(v-slot:error) {{usernameErrorMsg}}
           //- q-input(v-model="form.email" label="Email" :error="!emailValid" type="email")
           //-   template(v-slot:error) {{emailErrorMsg}}
-          q-input(v-model="form.password" label="Password")
+          q-input(v-model="form.password" label="Password" type="password")
             template(v-slot:error) {{passErrorMsg}}
         q-card.bg-red.q-pa-sm.q-ma-sm.text-white(v-if="errormsg")
           p Error: {{errormsg}}

@@ -1,24 +1,23 @@
 <template lang="pug">
   q-layout(view="lHh Lpr lFf")
-    q-header(elevated)
+    q-header(elevated).bg-white
       q-toolbar.bg-white.text-black
-        q-btn(flat dense round icon="menu" aria-label="Menu" @click="leftDrawerOpen = !leftDrawerOpen")
         q-toolbar-title
           div Boid Swarm
         div(v-if="thisUser")
           .row
             q-toolbar-title {{thisUser.username}}
-            q-btn.inline(@click="$root.$emit('logout')")
+            q-btn.inline(@click="$root.$emit('logout')" flat color="red")
               q-tooltip Logout
               q-icon(name="logout")
         div(v-else)
           q-btn(@click="$root.$emit('modal','auth')") login
-    q-drawer(v-model="leftDrawerOpen" show-if-above bordered content-class="bg-grey-2")
-      q-item-label(header) Navigation
+    q-drawer(v-model="leftDrawerOpen" show-if-above bordered content-class="traycolor" :width="55" :breakpoint="100")
+      q-item-label(header)
       q-list {{$router.route}}
         q-item(v-for="(page, index) in pages" :key="index" clickable 
         :active="page.name === $route.name" 
-        active-class="bg-green text-white"
+        active-class="bg-accent text-white"
         v-ripple @click="navigate({name:page.name})")
           q-item-section(avatar) 
             q-icon(:name="page.icon")
@@ -38,7 +37,7 @@ export default {
         {name:"Home",icon:"home"},
         {name:"Teams",icon:"people"},
         {name:"Profile",icon:"account_circle"},
-        {name:"Research",icon:"fas fa-dna"},
+        {name:"Research",icon:"fas fa-flask"},
         {name:"Prize Pool",icon:"fas fa-trophy"}
       ],
       leftDrawerOpen: false
@@ -52,3 +51,7 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+
+</style>
